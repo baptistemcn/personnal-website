@@ -1,9 +1,12 @@
 import "./App.css";
+import { Container } from "./components";
 
 function App() {
   return (
     <>
-      <h1>Baptsite Marcon</h1>
+      <Container>
+        <h1>Baptiste Marcon</h1>
+      </Container>
     </>
   );
 }
