@@ -1,12 +1,12 @@
 import "./App.css";
-import { Container } from "./components";
+import { Wrapper } from "./components";
 
 function App() {
   return (
     <>
-      <Container>
+      <Wrapper>
         <h1>Baptiste Marcon</h1>
-      </Container>
+      </Wrapper>
     </>
   );
 }
