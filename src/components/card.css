@@ -29,3 +29,11 @@ img {
   align-items: left;
   width: 66%;
 }
+
+.card-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 33%;
+  gap: 10px;
+}
