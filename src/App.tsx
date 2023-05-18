@@ -29,8 +29,6 @@ function App() {
     i18n.changeLanguage(lng);
   }, [i18n]);
 
-  console.log(ICONS);
-
   return (
     <>
       <main>
