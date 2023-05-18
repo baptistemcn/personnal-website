@@ -1,4 +1,4 @@
-name: Deploy Github Pages
+name: Build and Depoy
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build 🚀
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +36,7 @@ jobs:
           path: ./dist
 
   deploy:
-    name: Deploy
+    name: Deploy 📩
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/develop'
@@ -49,7 +49,4 @@ jobs:
           path: ./dist
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        run: surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
