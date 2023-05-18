@@ -23,6 +23,11 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Outfit", sans-serif;
+  font-size: 1.25rem;
   background: var(--biege-body);
   color: var(--charcoal);
+}
+
+a {
+  color: var(--blue);
 }

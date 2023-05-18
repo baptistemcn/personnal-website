@@ -1,7 +1,9 @@
 {
   "translation": {
     "presentation": {
-      "title": "Hey, je suis Baptiste Marcon"
+      "title": "Développeur Front-End",
+      "text": "Hey, je suis Baptiste Marcon, développeur front-end basé en France 📍",
+      "alt": "Image de Baptiste Marcon"
     }
   }
 }

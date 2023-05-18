@@ -1,7 +1,10 @@
 import { useEffect } from "react";
-import "./App.css";
-
 import { useTranslation } from "react-i18next";
+
+import { Card } from "./components";
+
+import "./App.css";
+import img from "./assets/baptiste-marcon.png";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -11,13 +14,16 @@ function App() {
     i18n.changeLanguage(lng);
   }, [i18n]);
 
-  console.log(process.env.NODE_ENV);
-
   return (
     <>
-      <h1>Baptiste Marcon</h1>
-
-      <p>{t("presentation.title")}</p>
+      <main>
+        <Card
+          alt={t("presentation.alt")}
+          img={img}
+          text={t("presentation.text")}
+          title={t("presentation.title")}
+        />
+      </main>
     </>
   );
 }
