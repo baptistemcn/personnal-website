@@ -38,5 +38,5 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to Surge
         run: surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
