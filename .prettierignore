@@ -2,6 +2,5 @@ node_modules/
 dist/
 *.d.ts
 *.svg
-*.json
 *.yaml
 *.cjs

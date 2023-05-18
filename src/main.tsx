@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import App from "./App.tsx";
-import { Wrapper } from "./components/Wrapper.tsx";
+import "./i18n.ts";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+import App from "./App.tsx";
+import { Wrapper } from "./components";
+
+ReactDOM.createRoot(document.getElementById("app") as HTMLElement).render(
   <React.StrictMode>
     <Wrapper>
       <App />
