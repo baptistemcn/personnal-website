@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build 🚀
+    name: Build 🚀 & Deploy 📩
     runs-on: ubuntu-latest
 
     steps:
@@ -34,19 +34,6 @@ jobs:
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
-
-  deploy:
-    name: Deploy 📩
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/develop'
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
         with:
           name: production-files
           path: ./dist
