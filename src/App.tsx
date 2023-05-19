@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Card } from "./components";
+import { Card, Footer } from "./components";
 
 import "./App.css";
 import img from "./assets/baptiste-marcon.png";
@@ -40,6 +40,9 @@ function App() {
           title={t("presentation.title")}
         />
       </main>
+      <>
+        <Footer />
+      </>
     </>
   );
 }
