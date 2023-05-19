@@ -1,9 +1,9 @@
-div {
+.wrapper {
   margin: 15px;
 }
 
 @media (min-width: 1366px) {
-  div {
+  .wrapper {
     display: block;
     margin: auto;
     width: 1366px;

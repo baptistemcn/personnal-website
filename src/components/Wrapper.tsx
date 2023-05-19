@@ -7,5 +7,5 @@ interface WrapperProps {
 }
 
 export const Wrapper = ({ children }: WrapperProps) => {
-  return <div>{children}</div>;
+  return <div className="wrapper">{children}</div>;
 };
