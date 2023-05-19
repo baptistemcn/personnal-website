@@ -8,8 +8,8 @@ p {
 }
 
 img {
-  height: 256px;
-  width: 256px;
+  height: 128px;
+  width: 128px;
 }
 
 .card-container {
@@ -37,6 +37,20 @@ img {
   gap: 10px;
 }
 
+@media (min-width: 576px) and (max-width: 1023.98px) {
+  img {
+    height: 192px;
+    width: 192px;
+  }
+}
+
+@media (min-width: 1024px) {
+  img {
+    height: 256px;
+    width: 256px;
+  }
+}
+
 @media (min-width: 575.98px) {
   h1 {
     text-align: left;
@@ -52,7 +66,6 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100vh;
   }
 
   .card-image-container {
