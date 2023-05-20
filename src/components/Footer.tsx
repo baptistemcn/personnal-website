@@ -5,7 +5,9 @@ export const Footer = () => {
   const year = today.getFullYear();
   return (
     <footer>
-      <p>© {year} Baptiste Marcon. Made with ❤️</p>
+      <ul>
+        <li>© {year} Baptiste Marcon. Made with ❤️</li>
+      </ul>
     </footer>
   );
 };

@@ -1,12 +1,26 @@
 footer {
   position: fixed;
-  left: 0;
   bottom: 0;
-  min-width: 100%;
-  margin: 0 15px;
+  left: 0;
+  height: 50px;
+  width: 100%;
 }
 
-footer > p {
+footer > ul {
+  list-style-type: none;
   text-align: center;
-  font-size: 1rem;
+}
+
+footer > ul > li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+@media (max-width: 575px) {
+  footer > ul {
+    margin: auto;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
 }
