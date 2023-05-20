@@ -10,6 +10,10 @@ header > ul {
   list-style-type: none;
 }
 
+header > ul > a {
+  color: #000000;
+}
+
 header > ul > a > li {
   display: inline-block;
   margin: 0 10px;

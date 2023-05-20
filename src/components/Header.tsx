@@ -1,28 +1,27 @@
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import "./header.css";
 
-export const Header = () => {
-  const { t, i18n } = useTranslation();
+interface HeaderProps {
+  headers: Array<LinksProps>;
+}
 
-  useEffect(() => {
-    const lng = navigator.language;
-    i18n.changeLanguage(lng);
-  }, [i18n]);
+interface LinksProps {
+  name: string;
+  url: string;
+}
 
+export const Header = ({ headers }: HeaderProps) => {
   return (
     <header>
       <ul>
-        <a>
-          <li>{t("header.home")}</li>
-        </a>
-        <a>
-          <li>{t("header.about")}</li>
-        </a>
-        <a>
-          <li>{t("header.projects")}</li>
-        </a>
+        {headers.map((item, index) => {
+          return (
+            <Link to={item.url} key={index}>
+              <li>{item.name}</li>
+            </Link>
+          );
+        })}
       </ul>
     </header>
   );

@@ -22,6 +22,21 @@ const ICONS = [
   },
 ];
 
+const HEADERS = [
+  {
+    name: "Accueil",
+    url: "/",
+  },
+  {
+    name: "À propos",
+    url: "/about",
+  },
+  {
+    name: "Projets",
+    url: "/projects",
+  },
+];
+
 function App() {
   const { t, i18n } = useTranslation();
 
@@ -32,7 +47,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header headers={HEADERS} />
       <main>
         <Routes>
           <Route
