@@ -1,5 +1,10 @@
 {
   "translation": {
+    "header": {
+      "home": "Accueil",
+      "about": "À propos",
+      "projects": "Projets"
+    },
     "presentation": {
       "title": "Développeur Front-End",
       "text": "Hey, je suis Baptiste Marcon, développeur front-end basé en France 📍",

@@ -12,7 +12,7 @@
   --biege: #f9f4da;
   --biege-10: rgba(249, 244, 218, 0.1);
   --biege-50: rgba(249, 244, 218, 0.5);
-  --blue: #12b5e5;
+  --blue: #0096c4;
   --orange: #fc7428;
   --red: #ed203d;
 }
@@ -28,6 +28,7 @@ body {
   color: var(--charcoal);
 }
 
-a {
+a:hover {
   color: var(--blue);
+  cursor: pointer;
 }

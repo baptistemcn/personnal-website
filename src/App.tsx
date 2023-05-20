@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Card, Footer } from "./components";
+import { Card, Footer, Header } from "./components";
 
 import "./App.css";
 import img from "./assets/baptiste-marcon.png";
@@ -31,6 +31,9 @@ function App() {
 
   return (
     <>
+      <>
+        <Header />
+      </>
       <main>
         <Card
           alt={t("presentation.alt")}

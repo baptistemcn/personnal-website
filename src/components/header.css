@@ -1,0 +1,16 @@
+header {
+  position: relative;
+  left: 0;
+  top: 0;
+  text-align: right;
+  height: 30px;
+}
+
+header > ul {
+  list-style-type: none;
+}
+
+header > ul > a > li {
+  display: inline-block;
+  margin: 0 10px;
+}
