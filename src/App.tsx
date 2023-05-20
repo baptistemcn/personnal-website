@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import { Card, Footer, Header } from "./components";
 
@@ -31,21 +32,25 @@ function App() {
 
   return (
     <>
-      <>
-        <Header />
-      </>
+      <Header />
       <main>
-        <Card
-          alt={t("presentation.alt")}
-          icons={ICONS}
-          img={img}
-          text={t("presentation.text")}
-          title={t("presentation.title")}
-        />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Card
+                alt={t("presentation.alt")}
+                icons={ICONS}
+                img={img}
+                text={t("presentation.text")}
+                title={t("presentation.title")}
+              />
+            }
+          />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
       </main>
-      <>
-        <Footer />
-      </>
+      <Footer />
     </>
   );
 }
