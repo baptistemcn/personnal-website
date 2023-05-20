@@ -3,7 +3,12 @@
     "header": {
       "home": "Accueil",
       "about": "À propos",
-      "projects": "Projets"
+      "projects": "Projets",
+      "links": {
+        "home": "/fr/",
+        "about": "/fr/a-propos",
+        "projects": "/fr/projets"
+      }
     },
     "presentation": {
       "title": "Développeur Front-End",

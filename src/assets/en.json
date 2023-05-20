@@ -3,7 +3,12 @@
     "header": {
       "home": "Home",
       "about": "About",
-      "projects": "Projects"
+      "projects": "Projects",
+      "links": {
+        "home": "/en/",
+        "about": "/en/about",
+        "projects": "/en/projects"
+      }
     },
     "presentation": {
       "title": "Front-End Developer",

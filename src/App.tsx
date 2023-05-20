@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Navigate, Route, Routes } from "react-router-dom";
 
@@ -22,47 +22,63 @@ const ICONS = [
   },
 ];
 
-const HEADERS = [
-  {
-    name: "Accueil",
-    url: "/",
-  },
-  {
-    name: "À propos",
-    url: "/about",
-  },
-  {
-    name: "Projets",
-    url: "/projects",
-  },
-];
-
 function App() {
   const { t, i18n } = useTranslation();
+  const url = i18n.resolvedLanguage;
 
   useEffect(() => {
     const lng = navigator.language;
     i18n.changeLanguage(lng);
   }, [i18n]);
 
+  const HEADERS: Array<{
+    name: string;
+    url: string;
+    components: ReactNode;
+  }> = [
+    {
+      name: `${t("header.home")}`,
+      url: `${t("header.links.home")}`,
+      components: (
+        <Card
+          alt={t("presentation.alt")}
+          icons={ICONS}
+          img={img}
+          text={t("presentation.text")}
+          title={t("presentation.title")}
+        />
+      ),
+    },
+    {
+      name: `${t("header.about")}`,
+      url: `${t("header.links.about")}`,
+      components: null,
+    },
+    {
+      name: `${t("header.projects")}`,
+      url: `${t("header.links.projects")}`,
+      components: null,
+    },
+  ];
+
   return (
     <>
       <Header headers={HEADERS} />
       <main>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Card
-                alt={t("presentation.alt")}
-                icons={ICONS}
-                img={img}
-                text={t("presentation.text")}
-                title={t("presentation.title")}
+          {HEADERS.map((element, index) => {
+            return (
+              <Route
+                key={index}
+                path={element.url}
+                element={element.components}
               />
-            }
+            );
+          })}
+          <Route
+            path="*"
+            element={<Navigate to={url === "fr" ? "/fr/" : "/en/"} />}
           />
-          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
       <Footer />

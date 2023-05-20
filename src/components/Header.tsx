@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 interface LinksProps {
-  name: string;
+  name?: string;
   url: string;
 }
 
