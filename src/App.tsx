@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import { Footer, Header } from "./components";
-import { Card } from "./pages";
+import { About, Home } from "./pages";
 
 import "./App.css";
 
@@ -22,13 +22,13 @@ function App() {
   const PAGES: Array<{
     name: string;
     url: string;
-    components: ReactNode;
+    pages: ReactNode;
   }> = [
     {
       name: `${t("header.home")}`,
       url: `${t("header.links.home")}`,
-      components: (
-        <Card
+      pages: (
+        <Home
           alt={t("presentation.alt")}
           icons={ICONS}
           img={img}
@@ -40,12 +40,18 @@ function App() {
     {
       name: `${t("header.about")}`,
       url: `${t("header.links.about")}`,
-      components: null,
+      pages: (
+        <About
+          subtitle={t("about.subtitle")}
+          title={t("about.title")}
+          text={t("about.text")}
+        />
+      ),
     },
     {
       name: `${t("header.projects")}`,
       url: `${t("header.links.projects")}`,
-      components: null,
+      pages: null,
     },
   ];
 
@@ -56,11 +62,7 @@ function App() {
         <Routes>
           {PAGES.map((element, index) => {
             return (
-              <Route
-                key={index}
-                path={element.url}
-                element={element.components}
-              />
+              <Route key={index} path={element.url} element={element.pages} />
             );
           })}
           <Route

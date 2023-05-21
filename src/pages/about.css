@@ -1,0 +1,14 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container-presentation {
+  margin: 15px;
+}
+
+.about-container-presentation > p {
+  text-align: center;
+}
