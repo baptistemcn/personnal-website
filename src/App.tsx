@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import { Footer, Header } from "./components";
-import { About, Home } from "./pages";
+import { About, Home, Projects } from "./pages";
 
 import "./App.css";
 
@@ -51,7 +51,7 @@ function App() {
     {
       name: `${t("header.projects")}`,
       url: `${t("header.links.projects")}`,
-      pages: null,
+      pages: <Projects title={t("projects.title")} />,
     },
   ];
 
