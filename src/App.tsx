@@ -7,7 +7,7 @@ import { About, Home, Projects } from "./pages";
 
 import "./App.css";
 
-import img from "./assets/baptiste-marcon.png";
+import img from "./assets/baptiste-marcon.webp";
 import { ICONS } from "./assets/db";
 
 function App() {
