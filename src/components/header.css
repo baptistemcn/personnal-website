@@ -10,11 +10,12 @@ header > ul {
   list-style-type: none;
 }
 
-header > ul > a {
+header > ul > li > a {
   color: #000000;
+  text-decoration: none;
 }
 
-header > ul > a > li {
+header > ul > li {
   display: inline-block;
   margin: 0 10px;
 }

@@ -38,7 +38,7 @@ hr {
   margin: 0;
 }
 
-header > ul > a > li:hover {
+header > ul > li:hover {
   border-bottom: 2px solid var(--coal);
   padding: 0 0 5px 0;
 }

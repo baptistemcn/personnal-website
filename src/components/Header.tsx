@@ -24,14 +24,13 @@ export const Header = ({ headers }: HeaderProps) => {
       <ul>
         {headers.map((item, index) => {
           return (
-            <Link to={item.url} key={index}>
-              <li
-                onClick={() => handleNavItemClick(item.name)}
-                className={activeNavItem === item.name ? "active" : ""}
-              >
-                {item.name}
-              </li>
-            </Link>
+            <li
+              key={index}
+              onClick={() => handleNavItemClick(item.name)}
+              className={activeNavItem === item.name ? "active" : ""}
+            >
+              <Link to={item.url}>{item.name}</Link>
+            </li>
           );
         })}
       </ul>
