@@ -66,6 +66,9 @@ devDependencies:
   vite:
     specifier: ^4.3.2
     version: 4.3.2(@types/node@20.2.0)
+  vite-plugin-sitemap:
+    specifier: ^0.4.2
+    version: 0.4.2
 
 packages:
 
@@ -2566,6 +2569,10 @@ packages:
     dependencies:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
+    dev: true
+
+  /vite-plugin-sitemap@0.4.2:
+    resolution: {integrity: sha512-xNTYPcNW+XthOJqI459DYyCZ6nPDKpnFFnvMHVlshtDn+UUp1y37HgmvmWEsCdLp0LZILnzHfrjVrH44V2krAg==}
     dev: true
 
   /vite@4.3.2(@types/node@20.2.0):
