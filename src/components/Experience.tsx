@@ -1,18 +1,6 @@
 import "./experience.css";
 
-export interface ExperiencesProps {
-  experiences?: Array<ExperienceItem>;
-}
-
-export interface ExperienceItem {
-  title: string;
-  presentation: string;
-  technologies: Array<TechnologiesItem>;
-}
-
-export interface TechnologiesItem {
-  name: string;
-}
+import { ExperiencesProps } from "../types/experiences.interface";
 
 export const Experience = ({ experiences }: ExperiencesProps) => {
   return (

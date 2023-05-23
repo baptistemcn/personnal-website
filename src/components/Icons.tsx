@@ -1,10 +1,6 @@
 import "./icons.css";
 
-interface IconsProps {
-  img: string;
-  link: string;
-  name: string;
-}
+import { IconsProps } from "../types/icons.interface";
 
 export const Icons = ({ img, link, name }: IconsProps) => {
   return (

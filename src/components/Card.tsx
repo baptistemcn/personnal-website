@@ -1,20 +1,7 @@
-import { Icons } from "../components/Icons";
-
 import "./card.css";
 
-interface CardProps {
-  alt: string;
-  icons: Array<IconsProps>;
-  img: string;
-  text: string;
-  title: string;
-}
-
-interface IconsProps {
-  img: string;
-  link: string;
-  name: string;
-}
+import { Icons } from "../components/Icons";
+import { CardProps } from "../types";
 
 export const Card = ({ alt, icons, img, text, title }: CardProps) => {
   return (

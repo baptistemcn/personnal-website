@@ -1,10 +1,4 @@
-interface TechnologiesProps {
-  name: Array<TechnologiesItems>;
-}
-
-interface TechnologiesItems {
-  name: string;
-}
+import { TechnologiesProps } from "../types/technologies.interface";
 
 export const Technologies = ({ name }: TechnologiesProps) => {
   return (
