@@ -8,7 +8,7 @@ import { About, Home, Projects } from "./pages";
 import "./App.css";
 
 import img from "./assets/baptiste-marcon.webp";
-import { ICONS } from "./assets/db";
+import { EXPERIENCES, EXPERIENCES_EN, ICONS } from "./assets/db";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -45,6 +45,7 @@ function App() {
           subtitle={t("about.subtitle")}
           title={t("about.title")}
           text={t("about.text")}
+          experiences={urls === "fr" ? EXPERIENCES : EXPERIENCES_EN}
         />
       ),
     },
