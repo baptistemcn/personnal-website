@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import { Footer, Header } from "./components";
-import { About, Home, Projects } from "./pages";
+import { About, Certifications, Home, Projects } from "./pages";
 
 import "./App.css";
 
@@ -48,6 +48,11 @@ function App() {
           experiences={urls === "fr" ? EXPERIENCES : EXPERIENCES_EN}
         />
       ),
+    },
+    {
+      name: `${t("header.certifications")}`,
+      url: `${t("header.links.certifications")}`,
+      pages: <Certifications title={t("certifications.title")} />,
     },
     {
       name: `${t("header.projects")}`,
