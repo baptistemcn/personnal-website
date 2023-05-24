@@ -52,10 +52,6 @@ img {
 }
 
 @media (min-width: 575.98px) {
-  h1 {
-    text-align: left;
-  }
-
   p {
     text-align: left;
   }

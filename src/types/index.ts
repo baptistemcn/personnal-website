@@ -1,4 +1,8 @@
 export type { CardProps } from "./card.interface";
+export type {
+  CertificatesItems,
+  CertificatesProps,
+} from "./certificates.interface";
 export type { ExperienceItem, ExperiencesProps } from "./experiences.interface";
 export type { IconsProps } from "./icons.interface";
 export type {
