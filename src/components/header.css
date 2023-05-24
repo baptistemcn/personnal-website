@@ -2,20 +2,27 @@ header {
   position: relative;
   left: 0;
   top: 0;
-  text-align: right;
+  text-align: center;
   height: 30px;
 }
 
-header > ul {
+header > nav > ul {
   list-style-type: none;
+  padding-inline-start: 0px;
 }
 
-header > ul > li > a {
+header > nav > ul > li > a {
   color: #000000;
   text-decoration: none;
 }
 
-header > ul > li {
+header > nav > ul > li {
   display: inline-block;
   margin: 0 10px;
+}
+
+@media (min-width: 575.98px) {
+  header {
+    text-align: right;
+  }
 }
