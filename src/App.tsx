@@ -8,7 +8,7 @@ import { About, Certifications, Home, Projects } from "./pages";
 import "./App.css";
 
 import img from "./assets/baptiste-marcon.webp";
-import { EXPERIENCES, EXPERIENCES_EN, ICONS } from "./assets/db";
+import { CERTIFICATES, EXPERIENCES, EXPERIENCES_EN, ICONS } from "./assets/db";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -52,7 +52,12 @@ function App() {
     {
       name: `${t("header.certifications")}`,
       url: `${t("header.links.certifications")}`,
-      pages: <Certifications title={t("certifications.title")} />,
+      pages: (
+        <Certifications
+          certificates={CERTIFICATES}
+          title={t("certifications.title")}
+        />
+      ),
     },
     {
       name: `${t("header.projects")}`,

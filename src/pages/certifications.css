@@ -1,0 +1,16 @@
+.certifications-container > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ".";
+  justify-items: center;
+}
+
+@media (min-width: 767.98px) {
+  .certifications-container > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+    grid-template-areas: ". .";
+  }
+}
