@@ -38,18 +38,7 @@ hr {
   margin: 0;
 }
 
-header > ul > li:hover {
-  border-bottom: 2px solid var(--coal);
-  padding: 0 0 5px 0;
-}
-
 .active {
-  border-bottom: 2px solid var(--blue);
-  padding: 0 0 5px 0;
-  font-weight: bold;
-}
-
-.experience-container > div > h3 {
   border-bottom: 2px solid var(--blue);
   padding: 0 0 5px 0;
   font-weight: bold;

@@ -15,6 +15,12 @@
   margin: 10px;
 }
 
+.experience-container > div > h3 {
+  border-bottom: 2px solid var(--blue);
+  padding: 0 0 5px 0;
+  font-weight: bold;
+}
+
 .experience-container > div > ul {
   padding-inline-start: 0px;
 }

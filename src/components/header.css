@@ -18,11 +18,20 @@ header > nav > ul > li > a {
 
 header > nav > ul > li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 5px;
+}
+
+header > nav > ul > li:hover {
+  border-bottom: 2px solid var(--coal);
+  padding: 0 0 5px 0;
 }
 
 @media (min-width: 575.98px) {
   header {
     text-align: right;
+  }
+
+  header > nav > ul > li {
+    margin: 0 10px;
   }
 }
