@@ -43,9 +43,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install Surge cli
-        run: pnpm install -g surge
-
       - name: Build project
         run: pnpm run build
 
@@ -55,5 +52,11 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Deploy to Surge
-        run: surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.2.0
+        with:
+          branch: gh-pages
+          folder: dist
+          cleanup: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          domain: ${{ secrets.GITHUB_PAGES_URL }}
