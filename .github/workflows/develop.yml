@@ -52,10 +52,5 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.2.0
-        with:
-          branch: gh-pages
-          folder: dist
-          cleanup: false
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to Surge
+        run: surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
