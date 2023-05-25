@@ -46,6 +46,12 @@ jobs:
       - name: Build project
         run: pnpm run build
 
+      - name: Initiate Git Email Credential
+        run: git config --local user.email ${{ secrets.EMAIL }}
+
+      - name: Initiate Git Use Credential
+        run: git config --local user.name ${{ secrets.NAME }}
+
       - name: Install Github Pages cli
         run: pnpm install -g gh-pages
 
