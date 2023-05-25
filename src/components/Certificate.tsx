@@ -10,7 +10,7 @@ export const Certificate = ({ certificates }: CertificatesProps) => {
             <h2>{cert.name}</h2>
             <a href={cert.link}>{cert.link}</a>
             <a href={cert.download} target="_blank" rel="noopener" download>
-              <button> {cert.label}</button>
+              <button>{cert.label}</button>
             </a>
           </article>
         );
