@@ -43,14 +43,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Install Surge cli
+        run: pnpm install -g surge
+
       - name: Build project
         run: pnpm run build
-
-      - name: Initiate Git Email Credential
-        run: git config --local user.email ${{ secrets.EMAIL }}
-
-      - name: Initiate Git Use Credential
-        run: git config --local user.name ${{ secrets.NAME }}
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
@@ -58,5 +55,5 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Deploy to Github Pages
-        run: pnpm run deploy
+      - name: Deploy to Surge
+        run: surge ./dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
