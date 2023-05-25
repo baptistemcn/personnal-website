@@ -46,6 +46,9 @@ jobs:
       - name: Build project
         run: pnpm run build
 
+      - name: Install Github Pages cli
+        run: pnpm install -g gh-pages
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:

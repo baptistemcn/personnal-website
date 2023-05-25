@@ -10,9 +10,14 @@ const dirname =
     ? resolve(__dirname, "200.html")
     : resolve(__dirname, "index.html");
 
+const baseURL =
+  process.env.NODE_ENV === "production"
+    ? "https://baptistemcn.github.io/"
+    : "/";
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/",
+  base: baseURL,
   plugins: [
     react(),
     robotsTxt(),
