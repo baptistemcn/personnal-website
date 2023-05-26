@@ -28,6 +28,10 @@ body {
   color: var(--charcoal);
 }
 
+main {
+  margin: 60px 0 0;
+}
+
 a:hover {
   color: var(--blue);
   cursor: pointer;
