@@ -9,9 +9,11 @@ export const Certificate = ({ certificates }: CertificatesProps) => {
           <article className="certificate-container" key={index}>
             <h2>{cert.name}</h2>
             <a href={cert.link}>{cert.link}</a>
-            <a href={cert.download} target="_blank" rel="noopener" download>
-              <button>{cert.label}</button>
-            </a>
+            {cert.download && (
+              <a href={cert.download} target="_blank" rel="noopener" download>
+                <button>{cert.label}</button>
+              </a>
+            )}
           </article>
         );
       })}

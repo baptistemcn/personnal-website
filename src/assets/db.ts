@@ -1,7 +1,5 @@
 import github from "./github.png";
 import linkedin from "./linkedin.png";
-import react from "./Classic React Certificate.pdf";
-import modern_js from "./Modern JavaScript Certificate.pdf";
 
 export const ICONS = [
   {
@@ -64,13 +62,9 @@ export const CERTIFICATES = [
   {
     name: "Class React by dev.ui",
     link: "https://ui.dev/c/classic-react/",
-    download: `${react}`,
-    label: "Download",
   },
   {
     name: "Modern Javascript by dev.ui",
     link: "https://ui.dev/c/modern-javascript/",
-    download: `${modern_js}`,
-    label: "Download",
   },
 ];
