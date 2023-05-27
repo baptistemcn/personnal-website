@@ -5,6 +5,6 @@ export interface CertificatesProps {
 export interface CertificatesItems {
   name: string;
   link: string;
-  download: string;
-  label: string;
+  download?: string;
+  label?: string;
 }
