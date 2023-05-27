@@ -40,3 +40,9 @@
 .certificate-container > a > button:active {
   background-color: var(--blue);
 }
+
+@media (min-width: 575.98px) {
+  .certificate-container {
+    padding: 5px 0;
+  }
+}
