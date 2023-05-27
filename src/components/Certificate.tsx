@@ -6,7 +6,7 @@ export const Certificate = ({ certificates }: CertificatesProps) => {
     <>
       {certificates.map((cert, index) => {
         return (
-          <article className="certificate-container" key={index}>
+          <article className="certificate" key={index}>
             <h2>{cert.name}</h2>
             <a href={cert.link}>{cert.link}</a>
             {cert.download && (

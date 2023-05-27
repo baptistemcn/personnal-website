@@ -1,4 +1,4 @@
-.experience-container {
+.experience {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -11,34 +11,34 @@
   margin: 15px 0;
 }
 
-.experience-container > div {
+.experience > div {
   margin: 10px;
 }
 
-.experience-container > div > h3 {
+.experience > div > h3 {
   border-bottom: 2px solid var(--blue);
   padding: 0 0 5px 0;
   font-weight: bold;
 }
 
-.experience-container > div > ul {
+.experience > div > ul {
   padding-inline-start: 0px;
 }
 
-.experience-container > div > ul > li > span {
+.experience > div > ul > li > span {
   display: inline-block;
   margin: 0 0 0 15px;
 }
 
-.experience-container > div > ul > li:last-child > span {
+.experience > div > ul > li:last-child > span {
   display: none;
 }
 
-.experience-container > div > ul > li:first-child {
+.experience > div > ul > li:first-child {
   margin: 0 10px 10px 10px;
 }
 
-.experience-container > div > ul > li {
+.experience > div > ul > li {
   list-style-type: none;
   text-align: left;
   padding-inline-start: 0px;

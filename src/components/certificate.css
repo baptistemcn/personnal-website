@@ -1,4 +1,4 @@
-.certificate-container {
+.certificate {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,12 +11,12 @@
   box-shadow: 1px 3px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-.certificate-container > a {
+.certificate > a {
   margin: 1em 0;
   color: var(--blue);
 }
 
-.certificate-container > a > button {
+.certificate > a > button {
   display: inline-block;
   padding: 12px 24px;
   margin: 10px 0;
@@ -33,17 +33,17 @@
   cursor: pointer;
 }
 
-.certificate-container > a > button:hover {
+.certificate > a > button:hover {
   color: var(--blue);
   background-color: #ffffff;
 }
 
-.certificate-container > a > button:active {
+.certificate > a > button:active {
   background-color: var(--blue);
 }
 
 @media (min-width: 575.98px) {
-  .certificate-container {
+  .certificate {
     padding: 5px 0;
   }
 }

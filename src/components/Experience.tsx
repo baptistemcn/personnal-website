@@ -7,7 +7,7 @@ export const Experience = ({ experiences }: ExperiencesProps) => {
     <>
       {experiences?.map((experience, index) => {
         return (
-          <div key={index} className="experience-container">
+          <div key={index} className="experience">
             <div>
               <h3>{experience.title}</h3>
               <p>{experience.presentation}</p>

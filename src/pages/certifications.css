@@ -1,4 +1,4 @@
-.certifications-container > div {
+.certifications > div {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -7,7 +7,7 @@
 }
 
 @media (min-width: 767.98px) {
-  .certifications-container > div {
+  .certifications > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 20px;

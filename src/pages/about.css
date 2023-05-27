@@ -1,19 +1,19 @@
-.about-container {
+.about {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.about-container-presentation {
+.about-presentation {
   margin: 15px;
 }
 
-.about-container-presentation > p {
+.about-presentation > p {
   text-align: center;
 }
 
-.about-container-experience {
+.about-experience {
   display: flex;
   flex-direction: column;
   width: 100%;

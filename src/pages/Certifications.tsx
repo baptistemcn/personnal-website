@@ -12,7 +12,7 @@ export const Certifications = ({
   certificates,
 }: CertificationsPageProps) => {
   return (
-    <div className="certifications-container">
+    <div className="certifications">
       <h1>{title}</h1>
       <div>
         <Certificate certificates={certificates} />

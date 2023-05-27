@@ -20,13 +20,13 @@ export interface TechnologiesItem {
 
 export const About = ({ experiences, subtitle, text, title }: AboutProps) => {
   return (
-    <div className="about-container">
+    <div className="about">
       <h1>{title}</h1>
-      <div className="about-container-presentation">
+      <div className="about-presentation">
         <p>{text}</p>
       </div>
       <h2>{subtitle}</h2>
-      <div className="about-container-experience">
+      <div className="about-experience">
         <Experience experiences={experiences} />
       </div>
     </div>

@@ -5,14 +5,14 @@ import { CardProps } from "../types";
 
 export const Card = ({ alt, icons, img, text, title }: CardProps) => {
   return (
-    <div className="card-container">
-      <div className="card-image-container">
+    <div className="card">
+      <div className="card-image">
         <img src={img} alt={alt} />
       </div>
-      <div className="card-text-container">
+      <div className="card-text">
         <h1>{title}</h1>
         <p>{text}</p>
-        <span className="card-icons-container">
+        <span className="card-icons">
           {icons.map((icon, index) => {
             return (
               <Icons
