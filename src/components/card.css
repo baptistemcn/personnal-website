@@ -1,17 +1,3 @@
-h1 {
-  text-align: center;
-}
-
-p {
-  white-space: pre-line;
-  text-align: center;
-}
-
-img {
-  height: 128px;
-  width: 128px;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -25,9 +11,23 @@ img {
   flex-direction: column;
 }
 
+.card-image > img {
+  height: 128px;
+  width: 128px;
+}
+
 .card-text {
   display: flex;
   flex-direction: column;
+}
+
+.card-text > p {
+  white-space: pre-line;
+  text-align: center;
+}
+
+.card-text > h1 {
+  text-align: center;
 }
 
 .card-icons {
@@ -38,24 +38,21 @@ img {
 }
 
 @media (min-width: 576px) and (max-width: 1023.98px) {
-  img {
+  .card {
+    flex-direction: column;
+  }
+
+  .card-image > img {
     height: 192px;
     width: 192px;
+  }
+
+  .card-text > h1 {
+    text-align: center;
   }
 }
 
 @media (min-width: 1024px) {
-  img {
-    height: 256px;
-    width: 256px;
-  }
-}
-
-@media (min-width: 575.98px) {
-  p {
-    text-align: left;
-  }
-
   .card {
     flex-direction: row;
   }
@@ -63,6 +60,19 @@ img {
   .card-image {
     align-items: flex-end;
     width: 25%;
+  }
+
+  .card-image > img {
+    height: 256px;
+    width: 256px;
+  }
+
+  .card-text > h1 {
+    text-align: left;
+  }
+
+  .card-text > p {
+    text-align: left;
   }
 
   .card-icons {
