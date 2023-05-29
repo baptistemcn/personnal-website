@@ -12,7 +12,7 @@ export const Card = ({ alt, icons, img, text, title }: CardProps) => {
       <div className="card-text">
         <h1>{title}</h1>
         <p>{text}</p>
-        <span className="card-icons">
+        <div className="card-icons">
           {icons.map((icon, index) => {
             return (
               <Icons
@@ -23,7 +23,7 @@ export const Card = ({ alt, icons, img, text, title }: CardProps) => {
               />
             );
           })}
-        </span>
+        </div>
       </div>
     </div>
   );

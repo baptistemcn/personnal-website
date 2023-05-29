@@ -77,7 +77,6 @@
 
   .card-icons {
     justify-content: flex-start;
-    width: 33%;
     gap: 10px;
   }
 }
