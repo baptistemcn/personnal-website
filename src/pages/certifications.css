@@ -1,3 +1,7 @@
+.certifications > h1 {
+  text-align: center;
+}
+
 .certifications > div {
   display: grid;
   grid-template-columns: 1fr;
