@@ -21,7 +21,7 @@ export const EXPERIENCES = [
       "Dans mon rôle actuel, je me concentre sur le développement de nouvelles fonctionnalités, la création d'intégrations de design attrayantes et la gestion du code hérité, contribuant ainsi à l'évolution et à l'amélioration continues de nos produits.",
     technologies: [
       {
-        name: "Angular 13",
+        name: "Angular",
       },
       {
         name: "RxJS",
@@ -30,7 +30,7 @@ export const EXPERIENCES = [
         name: "Rest API",
       },
       {
-        name: "PHP5",
+        name: "PHP",
       },
     ],
   },
@@ -43,7 +43,7 @@ export const EXPERIENCES_EN = [
       "In my current role, I focus on developing new features, creating appealing design integrations, and managing legacy code, thereby contributing to the continuous evolution and improvement of our products.",
     technologies: [
       {
-        name: "Angular 13",
+        name: "Angular",
       },
       {
         name: "RxJS",
@@ -52,7 +52,7 @@ export const EXPERIENCES_EN = [
         name: "Rest API",
       },
       {
-        name: "PHP5",
+        name: "PHP",
       },
     ],
   },
