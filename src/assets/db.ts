@@ -27,10 +27,19 @@ export const EXPERIENCES = [
         name: "RxJS",
       },
       {
+        name: "Jest",
+      },
+      {
         name: "Rest API",
       },
       {
         name: "PHP",
+      },
+      {
+        name: "MySQL",
+      },
+      {
+        name: "Jenkins",
       },
     ],
   },
@@ -49,10 +58,19 @@ export const EXPERIENCES_EN = [
         name: "RxJS",
       },
       {
+        name: "Jest",
+      },
+      {
         name: "Rest API",
       },
       {
         name: "PHP",
+      },
+      {
+        name: "MySQL",
+      },
+      {
+        name: "Jenkins",
       },
     ],
   },
