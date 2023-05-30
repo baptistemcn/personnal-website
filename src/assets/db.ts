@@ -27,6 +27,9 @@ export const EXPERIENCES = [
         name: "RxJS",
       },
       {
+        name: "SASS",
+      },
+      {
         name: "Jest",
       },
       {
@@ -56,6 +59,9 @@ export const EXPERIENCES_EN = [
       },
       {
         name: "RxJS",
+      },
+      {
+        name: "SASS",
       },
       {
         name: "Jest",
