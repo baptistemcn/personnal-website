@@ -43,6 +43,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Run Code Formatter
+        run: pnpm run format
+
+      - name: Run Code Linter
+        run: pnpm run lint
+
+      - name: Run Unit Tests
+        run: pnpm run test
+
       - name: Install Surge cli
         run: pnpm install -g surge
 
