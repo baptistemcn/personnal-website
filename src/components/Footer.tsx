@@ -1,8 +1,7 @@
 import "./footer.css";
 
 export const Footer = () => {
-  const today = new Date();
-  const year = today.getFullYear();
+  const year = new Date().getFullYear();
   return (
     <footer>
       <ul>
