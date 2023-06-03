@@ -9,7 +9,8 @@ module.exports = {
         "index.ts"
     ],
   moduleNameMapper: {
-    '\\.(css|less)$': 'identity-obj-proxy',
+    "\\.(jpg|jpeg|png|gif|svg|webp)$": "jest-file-loader",
+    "\\.(css|less|scss)$": "identity-obj-proxy",
   },
   setupFilesAfterEnv: [
     "<rootDir>/src/setupTests.ts",
