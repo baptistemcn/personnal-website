@@ -43,6 +43,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Install Cypress
+        run: cypress install
+
       - name: Run Cypress Chrome
         uses: cypress-io/github-action@v5
         with:
