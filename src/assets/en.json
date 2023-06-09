@@ -8,8 +8,7 @@
       "links": {
         "home": "/en/",
         "about": "/en/about",
-        "certifications": "/fr/certifications",
-
+        "certifications": "/en/certifications",
         "projects": "/en/projects"
       }
     },
