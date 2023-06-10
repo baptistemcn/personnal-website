@@ -7,8 +7,7 @@ import { About, Certifications, Home, Projects } from "./pages";
 
 import "./App.css";
 
-import img from "./assets/baptiste-marcon.webp";
-import { CERTIFICATES, EXPERIENCES, EXPERIENCES_EN, ICONS } from "./assets/db";
+import { CERTIFICATES, EXPERIENCES, EXPERIENCES_EN } from "./assets/db";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -27,15 +26,7 @@ function App() {
     {
       name: `${t("header.home")}`,
       url: `${t("header.links.home")}`,
-      pages: (
-        <Home
-          alt={t("presentation.alt")}
-          icons={ICONS}
-          img={img}
-          text={t("presentation.text")}
-          title={t("presentation.title")}
-        />
-      ),
+      pages: <Home />,
     },
     {
       name: `${t("header.about")}`,

@@ -1,23 +1,26 @@
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 import { Card } from "../components";
 
-interface CardProps {
-  alt: string;
-  icons: Array<IconsProps>;
-  img: string;
-  text: string;
-  title: string;
-}
+import img from "../assets/baptiste-marcon.webp";
+import { ICONS } from "../assets/db";
 
-interface IconsProps {
-  img: string;
-  link: string;
-  name: string;
-}
+export const Home = () => {
+  const { t, i18n } = useTranslation();
 
-export const Home = ({ alt, icons, img, text, title }: CardProps) => {
+  useEffect(() => {
+    const lng = navigator.language;
+    i18n.changeLanguage(lng);
+  }, [i18n]);
+
   return (
-    <>
-      <Card alt={alt} icons={icons} img={img} text={text} title={title} />
-    </>
+    <Card
+      alt={t("presentation.alt")}
+      icons={ICONS}
+      img={img}
+      text={t("presentation.text")}
+      title={t("presentation.title")}
+    />
   );
 };

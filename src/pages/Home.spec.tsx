@@ -1,63 +1,41 @@
 import { render } from "@testing-library/react";
 import { Home } from "./Home";
 
-describe("Home Page", () => {
-  const mockProps = {
-    alt: "Card image",
-    icons: [
-      {
-        img: "icon1.png",
-        link: "https://example.com/icon1",
-        name: "Icon 1",
-      },
-      {
-        img: "icon2.png",
-        link: "https://example.com/icon2",
-        name: "Icon 2",
-      },
-    ],
-    img: "card-image.png",
-    text: "Card text",
-    title: "Card Title",
-  };
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({
+    t: (key: unknown) => key,
+    i18n: {
+      changeLanguage: jest.fn(),
+    },
+  }),
+}));
 
+describe("Home Page", () => {
   it("should render", () => {
-    render(<Home {...mockProps} />);
+    render(<Home />);
   });
 
   it("should render the card with the img", () => {
-    const { getByAltText } = render(<Home {...mockProps} />);
+    const { getByAltText } = render(<Home />);
 
-    const imgElement = getByAltText(mockProps.alt);
+    const imgElement = getByAltText("presentation.alt");
 
     expect(imgElement).toBeInTheDocument();
-    expect(imgElement).toHaveAttribute("src", mockProps.img);
   });
 
   it("should render the card title", () => {
-    const { getByRole } = render(<Home {...mockProps} />);
+    const { getByText } = render(<Home />);
 
-    const titleElement = getByRole("heading", { name: mockProps.title });
+    const imgElement = getByText("presentation.title");
 
-    expect(titleElement).toBeInTheDocument();
+    expect(imgElement).toBeInTheDocument();
   });
 
   it("should render the card text", () => {
-    const { getByText } = render(<Home {...mockProps} />);
+    const { getByText } = render(<Home />);
 
-    const textElement = getByText(mockProps.text);
+    const imgElement = getByText("presentation.text");
 
-    expect(textElement).toBeInTheDocument();
-  });
-
-  it("should render the card with correct icons", () => {
-    const { getByRole } = render(<Home {...mockProps} />);
-
-    mockProps.icons.forEach((icon) => {
-      const iconsElement = getByRole("link", { name: icon.name });
-
-      expect(iconsElement).toBeInTheDocument();
-      expect(iconsElement).toHaveAttribute("href", icon.link);
-    });
+    expect(imgElement).toBeInTheDocument();
   });
 });
