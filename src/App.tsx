@@ -39,7 +39,7 @@ function App() {
     {
       name: `${t("header.projects")}`,
       url: `${t("header.links.projects")}`,
-      pages: <Projects title={t("projects.title")} />,
+      pages: <Projects />,
     },
   ];
 
