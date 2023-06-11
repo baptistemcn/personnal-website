@@ -1,21 +1,24 @@
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
+import { CERTIFICATES } from "../assets/db";
 import { Certificate } from "../components";
-import { CertificatesItems } from "../types/certificates.interface";
+
 import "./certifications.css";
 
-interface CertificationsPageProps {
-  title: string;
-  certificates: Array<CertificatesItems>;
-}
+export const Certifications = () => {
+  const { t, i18n } = useTranslation();
 
-export const Certifications = ({
-  title,
-  certificates,
-}: CertificationsPageProps) => {
+  useEffect(() => {
+    const lng = navigator.language;
+    i18n.changeLanguage(lng);
+  }, [i18n]);
+
   return (
     <div className="certifications">
-      <h1>{title}</h1>
-      <div>
-        <Certificate certificates={certificates} />
+      <h1>{t("certifications.title")}</h1>
+      <div data-testid="certifications-list">
+        <Certificate certificates={CERTIFICATES} />
       </div>
     </div>
   );

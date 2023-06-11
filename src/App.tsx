@@ -7,8 +7,6 @@ import { About, Certifications, Home, Projects } from "./pages";
 
 import "./App.css";
 
-import { CERTIFICATES } from "./assets/db";
-
 function App() {
   const { t, i18n } = useTranslation();
   const urls = i18n.resolvedLanguage;
@@ -36,12 +34,7 @@ function App() {
     {
       name: `${t("header.certifications")}`,
       url: `${t("header.links.certifications")}`,
-      pages: (
-        <Certifications
-          certificates={CERTIFICATES}
-          title={t("certifications.title")}
-        />
-      ),
+      pages: <Certifications />,
     },
     {
       name: `${t("header.projects")}`,

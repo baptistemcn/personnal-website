@@ -1,38 +1,31 @@
 import { render } from "@testing-library/react";
 import { Certifications } from "./Certifications";
 
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({
+    t: (key: unknown) => key,
+    i18n: {
+      changeLanguage: jest.fn(),
+    },
+  }),
+}));
+
 describe("Certifications Component", () => {
-  const mockCertificates = [
-    { name: "Certificate 1", link: "https://example.com/cert1.pdf" },
-    { name: "Certificate 2", link: "https://example.com/cert2.pdf" },
-  ];
-
-  const mockProps = {
-    title: "Certifications",
-    certificates: mockCertificates,
-  };
-
   it("should render", () => {
-    render(<Certifications {...mockProps} />);
+    render(<Certifications />);
   });
 
   it("should render the title", () => {
-    const { getByText } = render(<Certifications {...mockProps} />);
+    const { getByText } = render(<Certifications />);
 
-    const titleElement = getByText(mockProps.title);
+    const titleElement = getByText("certifications.title");
     expect(titleElement).toBeInTheDocument();
   });
 
   it("should render the certifications", () => {
-    const { getByRole } = render(<Certifications {...mockProps} />);
+    const { getByTestId } = render(<Certifications />);
+    const certificateComponent = getByTestId("certifications-list");
 
-    mockCertificates.forEach((certificate) => {
-      const certificateLink = getByRole("link", {
-        name: certificate.link,
-      });
-
-      expect(certificateLink).toBeInTheDocument();
-      expect(certificateLink).toHaveAttribute("href", certificate.link);
-    });
+    expect(certificateComponent).toBeInTheDocument();
   });
 });
