@@ -87,6 +87,10 @@ export const EXPERIENCES =
 
 export const CERTIFICATES = [
   {
+    name: "React Hooks by dev.ui",
+    link: "https://ui.dev/c/react-hooks/",
+  },
+  {
     name: "Class React by dev.ui",
     link: "https://ui.dev/c/classic-react/",
   },
