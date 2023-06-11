@@ -1,60 +1,45 @@
 import { render } from "@testing-library/react";
 import { About } from "./About";
 
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({
+    t: (key: unknown) => key,
+    i18n: {
+      changeLanguage: jest.fn(),
+    },
+  }),
+}));
+
 describe("About Page", () => {
-  const mockExperiences = [
-    {
-      title: "Experience 1",
-      presentation: "Presentation 1",
-      technologies: [{ name: "Technology 1" }, { name: "Technology 2" }],
-    },
-    {
-      title: "Experience 2",
-      presentation: "Presentation 2",
-      technologies: [{ name: "Technology 3" }],
-    },
-  ];
-  const mockProps = {
-    title: "About",
-    subtitle: "Subtitle",
-    text: "Lorem ipsum dolor sit amet",
-    experiences: mockExperiences,
-  };
   it("should render", () => {
-    render(<About {...mockProps} />);
+    render(<About />);
   });
 
   it("should render the title", () => {
-    const { getByText } = render(<About {...mockProps} />);
+    const { getByText } = render(<About />);
 
-    const titleElement = getByText(mockProps.title);
+    const titleElement = getByText("about.title");
     expect(titleElement).toBeInTheDocument();
   });
 
   it("should render the subtitle", () => {
-    const { getByText } = render(<About {...mockProps} />);
+    const { getByText } = render(<About />);
 
-    const subtitleElement = getByText(mockProps.subtitle);
+    const subtitleElement = getByText("about.subtitle");
     expect(subtitleElement).toBeInTheDocument();
   });
 
   it("should render the text", () => {
-    const { getByText } = render(<About {...mockProps} />);
+    const { getByText } = render(<About />);
 
-    const textElement = getByText(mockProps.text);
+    const textElement = getByText("about.text");
     expect(textElement).toBeInTheDocument();
   });
 
-  it("should render the experiences", () => {
-    const { getByText } = render(<About {...mockProps} />);
+  it("should render experience component", () => {
+    const { getByTestId } = render(<About />);
+    const experienceComponent = getByTestId("about-experience");
 
-    const title = getByText(mockProps.title);
-    expect(title).toBeInTheDocument();
-
-    const presentation = getByText(mockProps.text);
-    expect(presentation).toBeInTheDocument();
-
-    const subtitle = getByText(mockProps.subtitle);
-    expect(subtitle).toBeInTheDocument();
+    expect(experienceComponent).toBeInTheDocument();
   });
 });

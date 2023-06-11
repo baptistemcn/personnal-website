@@ -1,33 +1,29 @@
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 import { Experience } from "../components";
+
+import { EXPERIENCES } from "../assets/db";
+
 import "./about.css";
 
-interface AboutProps {
-  subtitle: string;
-  text: string;
-  title: string;
-  experiences: Array<ExperienceItem>;
-}
+export const About = () => {
+  const { t, i18n } = useTranslation();
 
-export interface ExperienceItem {
-  title: string;
-  presentation: string;
-  technologies: Array<TechnologiesItem>;
-}
+  useEffect(() => {
+    const lng = navigator.language;
+    i18n.changeLanguage(lng);
+  }, [i18n]);
 
-export interface TechnologiesItem {
-  name: string;
-}
-
-export const About = ({ experiences, subtitle, text, title }: AboutProps) => {
   return (
     <div className="about">
-      <h1>{title}</h1>
+      <h1>{t("about.title")}</h1>
       <div className="about-presentation">
-        <p>{text}</p>
+        <p>{t("about.text")}</p>
       </div>
-      <h2>{subtitle}</h2>
-      <div className="about-experience">
-        <Experience experiences={experiences} />
+      <h2>{t("about.subtitle")}</h2>
+      <div className="about-experience" data-testid="about-experience">
+        <Experience experiences={EXPERIENCES} />
       </div>
     </div>
   );

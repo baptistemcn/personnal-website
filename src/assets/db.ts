@@ -14,7 +14,7 @@ export const ICONS = [
   },
 ];
 
-export const EXPERIENCES = [
+const EXPERIENCES_FR = [
   {
     title: "Full-Stack Developper - NEHS Digital",
     presentation:
@@ -48,7 +48,7 @@ export const EXPERIENCES = [
   },
 ];
 
-export const EXPERIENCES_EN = [
+const EXPERIENCES_EN = [
   {
     title: "Full-Stack Developer - NEHS Digital",
     presentation:
@@ -81,6 +81,9 @@ export const EXPERIENCES_EN = [
     ],
   },
 ];
+
+export const EXPERIENCES =
+  navigator.language === "fr" ? EXPERIENCES_FR : EXPERIENCES_EN;
 
 export const CERTIFICATES = [
   {
