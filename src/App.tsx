@@ -9,7 +9,7 @@ import "./App.css";
 
 function App() {
   const { t, i18n } = useTranslation();
-  const urls = i18n.resolvedLanguage;
+  const redirect = t("header.links.home");
 
   useEffect(() => {
     const lng = navigator.language;
@@ -53,10 +53,7 @@ function App() {
               <Route key={index} path={element.url} element={element.pages} />
             );
           })}
-          <Route
-            path="*"
-            element={<Navigate to={urls === "fr" ? "/fr/" : "/en/"} />}
-          />
+          <Route path="*" element={<Navigate to={redirect} />} />
         </Routes>
       </main>
       <Footer />
