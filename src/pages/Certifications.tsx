@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import { CERTIFICATES } from "../assets/db";
@@ -7,12 +6,7 @@ import { Certificate } from "../components";
 import "./certifications.css";
 
 export const Certifications = () => {
-  const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    const lng = navigator.language;
-    i18n.changeLanguage(lng);
-  }, [i18n]);
+  const { t } = useTranslation();
 
   return (
     <div className="certifications">

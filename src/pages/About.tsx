@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Experience } from "../components";
@@ -8,12 +7,7 @@ import { EXPERIENCES } from "../assets/db";
 import "./about.css";
 
 export const About = () => {
-  const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    const lng = navigator.language;
-    i18n.changeLanguage(lng);
-  }, [i18n]);
+  const { t } = useTranslation();
 
   return (
     <div className="about">

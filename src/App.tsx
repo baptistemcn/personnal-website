@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { Navigate, Route, Routes } from "react-router-dom";
 
@@ -8,13 +8,8 @@ import { About, Certifications, Home, Projects } from "./pages";
 import "./App.css";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const redirect = t("header.links.home");
-
-  useEffect(() => {
-    const lng = navigator.language;
-    i18n.changeLanguage(lng);
-  }, [i18n]);
 
   const PAGES: Array<{
     name: string;
