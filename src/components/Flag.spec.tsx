@@ -1,13 +1,14 @@
 import { render } from "@testing-library/react";
 import { Flag } from "./Flag";
+import { FRENCH_FLAG, US_FLAG } from "../assets/db";
 
 describe("Flag Component", () => {
   it("should render", () => {
-    render(<Flag lang="fr" />);
+    render(<Flag nation={""} />);
   });
 
   it("should render the US flag with the 'lang' prop is 'fr'", () => {
-    const { getByRole } = render(<Flag lang="fr" />);
+    const { getByRole } = render(<Flag nation={FRENCH_FLAG} />);
     const flagImage = getByRole("img");
     expect(flagImage).toBeInTheDocument();
     expect(flagImage.getAttribute("src")).toContain(
@@ -16,7 +17,7 @@ describe("Flag Component", () => {
   });
 
   it("should render the French flag with the 'lang' prop is 'en'", () => {
-    const { getByRole } = render(<Flag lang="en" />);
+    const { getByRole } = render(<Flag nation={US_FLAG} />);
     const flagImage = getByRole("img");
     expect(flagImage).toBeInTheDocument();
     expect(flagImage.getAttribute("src")).toContain(
