@@ -24,9 +24,21 @@ header > nav > ul > li:hover {
   padding: 0 0 5px 0;
 }
 
+header > nav > button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 @media (min-width: 575.98px) {
   header {
     text-align: right;
+  }
+
+  header > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   header > nav > ul > li {
