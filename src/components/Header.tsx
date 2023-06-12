@@ -36,8 +36,12 @@ export const Header = ({ headers }: HeaderProps) => {
     changeLanguage(lang);
   };
 
-  /* istanbul ignore next */
-  const handleFlag = language === "fr" ? FRENCH_FLAG : US_FLAG;
+  const flags: { [key: string]: string } = {
+    fr: FRENCH_FLAG,
+    en: US_FLAG,
+  };
+
+  const handleFlag = flags[language] || US_FLAG;
 
   return (
     <header>
