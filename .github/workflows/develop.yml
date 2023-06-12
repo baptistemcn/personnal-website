@@ -50,7 +50,7 @@ jobs:
         run: pnpm run lint
 
       - name: Run Unit Tests
-        run: pnpm run test
+        run: pnpm run test:coverage
 
       - name: Install Surge cli
         run: pnpm install -g surge
