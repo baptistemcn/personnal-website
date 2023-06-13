@@ -4,7 +4,7 @@ import { defineConfig } from "cypress";
 const url =
   process.env.NODE_ENV === "development"
     ? "http://localhost:5173"
-    : "https://baptistemcn.surge.sh/en/";
+    : "https://baptistemcn.surge.sh";
 
 export default defineConfig({
   e2e: {
