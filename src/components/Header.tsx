@@ -26,13 +26,15 @@ export const Header = ({ headers }: HeaderProps) => {
     setActiveNavItem(item);
   };
 
-  const changeLanguage = (lng: string) => {
+  const changeLanguage = (lng: string | undefined) => {
     i18n.changeLanguage(lng);
   };
 
   const handleChangeLanguage = () => {
-    /* istanbul ignore next */
-    const lang = language === "en" ? "fr" : "en";
+    const lang = {
+      en: "fr",
+      fr: "en",
+    }[language];
     changeLanguage(lang);
   };
 
