@@ -9,6 +9,26 @@ describe("header", () => {
     cy.get("header > nav").should("be.visible");
   });
 
+  it("should render a flag for switch language", () => {
+    cy.visit("");
+
+    cy.get("header > nav > button").should("be.visible");
+  });
+
+  it("should click on flag and change language", () => {
+    cy.visit("");
+
+    cy.get("header > nav > button").should("be.visible");
+
+    cy.location("pathname").should("include", "/en");
+
+    cy.get("header > nav > button").click();
+
+    cy.get("header > nav > button").click();
+
+    cy.location("pathname").should("include", "/fr");
+  });
+
   it("should render links in header", () => {
     cy.visit("");
 
