@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -52,7 +53,7 @@ export const Header = ({ headers }: HeaderProps) => {
           onClick={handleChangeLanguage}
           data-testid="lang-switch"
           role="button"
-          aria-label={t("button.lang.label") || ""}
+          aria-label={t("button.lang.label")!}
         >
           {language && (
             <Flag nation={handleFlag} description={t("img.flag.label")} />

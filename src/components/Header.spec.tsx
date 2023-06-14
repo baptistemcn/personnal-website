@@ -90,4 +90,20 @@ describe("Header Component", () => {
 
     expect(clicked).toBeTruthy();
   });
+
+  it("should render an aria-label with translate or empty", () => {
+    const { getByRole } = render(
+      <BrowserRouter>
+        <Header headers={headerMockProps} />
+      </BrowserRouter>,
+    );
+
+    const expectedAriaLabel = "button.lang.label";
+
+    const button = getByRole("button");
+
+    const buttonArialLabel = button.getAttribute("aria-label");
+
+    expect(buttonArialLabel).toEqual(expectedAriaLabel);
+  });
 });
