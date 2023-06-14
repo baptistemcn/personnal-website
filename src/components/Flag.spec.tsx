@@ -4,11 +4,13 @@ import { FRENCH_FLAG, US_FLAG } from "../assets/db";
 
 describe("Flag Component", () => {
   it("should render", () => {
-    render(<Flag nation={""} />);
+    render(<Flag nation={""} description="" />);
   });
 
   it("should render the US flag with the 'lang' prop is 'fr'", () => {
-    const { getByRole } = render(<Flag nation={FRENCH_FLAG} />);
+    const { getByRole } = render(
+      <Flag nation={FRENCH_FLAG} description="flag" />,
+    );
     const flagImage = getByRole("img");
     expect(flagImage).toBeInTheDocument();
     expect(flagImage.getAttribute("src")).toContain(
@@ -17,7 +19,7 @@ describe("Flag Component", () => {
   });
 
   it("should render the French flag with the 'lang' prop is 'en'", () => {
-    const { getByRole } = render(<Flag nation={US_FLAG} />);
+    const { getByRole } = render(<Flag nation={US_FLAG} description="flag" />);
     const flagImage = getByRole("img");
     expect(flagImage).toBeInTheDocument();
     expect(flagImage.getAttribute("src")).toContain(

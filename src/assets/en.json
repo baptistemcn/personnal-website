@@ -27,6 +27,16 @@
     },
     "projects": {
       "title": "In Progress..."
+    },
+    "button": {
+      "lang": {
+        "label": "Button to change language"
+      }
+    },
+    "img": {
+      "flag": {
+        "label": "French flag"
+      }
     }
   }
 }

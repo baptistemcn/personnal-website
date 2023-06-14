@@ -18,7 +18,7 @@ interface LinksProps {
 
 export const Header = ({ headers }: HeaderProps) => {
   const [activeNavItem, setActiveNavItem] = useState("");
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const language = i18n.language;
 
@@ -48,8 +48,15 @@ export const Header = ({ headers }: HeaderProps) => {
   return (
     <header>
       <nav>
-        <button onClick={handleChangeLanguage} data-testid="lang-switch">
-          {language && <Flag nation={handleFlag} />}
+        <button
+          onClick={handleChangeLanguage}
+          data-testid="lang-switch"
+          role="button"
+          aria-label={t("button.lang.label") || ""}
+        >
+          {language && (
+            <Flag nation={handleFlag} description={t("img.flag.label")} />
+          )}
         </button>
 
         <ul>

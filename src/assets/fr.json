@@ -27,6 +27,16 @@
     },
     "projects": {
       "title": "En cours..."
+    },
+    "button": {
+      "lang": {
+        "label": "Bouton pour changer la langue"
+      }
+    },
+    "img": {
+      "flag": {
+        "label": "Drapeau USA"
+      }
     }
   }
 }
