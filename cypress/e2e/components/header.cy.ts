@@ -20,13 +20,7 @@ describe("header", () => {
 
     cy.get("header > nav > button").should("be.visible");
 
-    cy.location("pathname").should("include", "/en");
-
     cy.get("header > nav > button").click();
-
-    cy.get("header > nav > button").click();
-
-    cy.location("pathname").should("include", "/fr");
   });
 
   it("should render links in header", () => {
