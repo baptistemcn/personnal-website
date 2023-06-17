@@ -1,4 +1,4 @@
-export { Card } from "./Card";
+export { Card } from "./card/Card";
 export { Certificate } from "./Certificate";
 export { Experience } from "./Experience";
 export { Footer } from "./Footer";

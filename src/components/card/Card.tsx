@@ -1,7 +1,7 @@
 import "./card.css";
 
-import { Icons } from "../components/Icons";
-import { CardProps } from "../types";
+import { Icons } from "../../components/Icons";
+import { CardProps } from "../../types";
 
 export const Card = ({ alt, icons, img, text, title }: CardProps) => {
   return (
