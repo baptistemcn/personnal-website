@@ -1,4 +1,4 @@
-import { CertificatesProps } from "../types";
+import { CertificatesProps } from "../../types";
 import "./certificate.css";
 
 export const Certificate = ({ certificates }: CertificatesProps) => {
