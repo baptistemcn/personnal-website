@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { Flag } from "./Flag";
-import { FRENCH_FLAG, US_FLAG } from "../assets/db";
+import { FRENCH_FLAG, US_FLAG } from "../../assets/db";
 
 describe("Flag Component", () => {
   it("should render", () => {
