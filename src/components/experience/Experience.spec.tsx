@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { Experience } from "./index";
+import { Experience } from "./Experience";
 
 describe("Experience Component", () => {
   const mockExperiences = [

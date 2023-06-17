@@ -1,6 +1,6 @@
 import "./experience.css";
 
-import { ExperiencesProps } from "../types/experiences.interface";
+import { ExperiencesProps } from "../../types/experiences.interface";
 
 export const Experience = ({ experiences }: ExperiencesProps) => {
   return (
