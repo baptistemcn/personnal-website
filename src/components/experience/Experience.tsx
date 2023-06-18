@@ -1,6 +1,7 @@
 import "./experience.css";
 
 import { ExperiencesProps } from "../../types/experiences.interface";
+import { Technologies } from "../technologies/Technologies";
 
 export const Experience = ({ experiences }: ExperiencesProps) => {
   return (
@@ -13,14 +14,7 @@ export const Experience = ({ experiences }: ExperiencesProps) => {
               <p>{experience.presentation}</p>
               <hr />
               <ul>
-                {experience.technologies.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <i>{item.name}</i>
-                      <span key={`separator-${index}`}>-</span>
-                    </li>
-                  );
-                })}
+                <Technologies name={experience.technologies} />
               </ul>
             </div>
           </div>

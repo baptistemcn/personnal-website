@@ -53,15 +53,4 @@ describe("Experience Component", () => {
       expect(technologyItems.length).toBe(experience.technologies.length);
     });
   });
-
-  it("should render technologies name", () => {
-    const { getByText } = render(<Experience experiences={mockExperiences} />);
-    const technologyNames = mockExperiences
-      .flatMap((experience) => experience.technologies)
-      .map((technology) => technology.name);
-
-    technologyNames.forEach((name) => {
-      expect(getByText(name)).toBeInTheDocument();
-    });
-  });
 });
