@@ -1,4 +1,7 @@
-.project > h1,
-p {
+.project > h1 {
+  text-align: center;
+}
+
+.project > p {
   text-align: center;
 }
