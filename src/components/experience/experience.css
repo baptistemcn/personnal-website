@@ -22,11 +22,11 @@
   align-items: center;
 }
 
-.experience > div > p {
+.experience > div > div > p {
   text-align: left;
 }
 
-.experience > div > h3 {
+.experience > div > div {
   border-bottom: 2px solid var(--blue);
   padding: 0 0 5px 0;
   font-weight: bold;
