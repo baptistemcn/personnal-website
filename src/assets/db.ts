@@ -19,6 +19,7 @@ const EXPERIENCES_FR = [
     title: "Full-Stack Developper - NEHS Digital",
     presentation:
       "Dans mon rôle actuel, je me concentre sur le développement de nouvelles fonctionnalités, la création d'intégrations de design attrayantes et la gestion du code hérité, contribuant ainsi à l'évolution et à l'amélioration continues de nos produits.",
+    duration: "Janv. 2022",
     technologies: [
       {
         name: "Angular",
@@ -53,6 +54,7 @@ const EXPERIENCES_EN = [
     title: "Full-Stack Developer - NEHS Digital",
     presentation:
       "In my current role, I focus on developing new features, creating appealing design integrations, and managing legacy code, thereby contributing to the continuous evolution and improvement of our products.",
+    duration: "Janv. 2022",
     technologies: [
       {
         name: "Angular",

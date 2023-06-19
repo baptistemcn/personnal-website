@@ -6,11 +6,13 @@ describe("Experience Component", () => {
     {
       title: "Experience 1",
       presentation: "Presentation 1",
+      duration: "Janv. 2022",
       technologies: [{ name: "Tech 1" }, { name: "Tech 2" }],
     },
     {
       title: "Experience 2",
       presentation: "Presentation 2",
+      duration: "Janv. 2022",
       technologies: [{ name: "Tech 3" }, { name: "Tech 4" }],
     },
   ];

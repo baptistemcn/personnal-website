@@ -7,5 +7,6 @@ export interface ExperiencesProps {
 export interface ExperienceItem {
   title: string;
   presentation: string;
+  duration: string;
   technologies: Array<TechnologiesItem>;
 }

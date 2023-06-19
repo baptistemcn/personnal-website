@@ -10,7 +10,14 @@ export const Experience = ({ experiences }: ExperiencesProps) => {
         return (
           <div key={index} className="experience">
             <div>
-              <h3>{experience.title}</h3>
+              <div>
+                <h3>{experience.title}</h3>
+                {experience.duration && (
+                  <>
+                    <p>{experience.duration}</p>
+                  </>
+                )}
+              </div>
               <p>{experience.presentation}</p>
               <hr />
               <ul>
