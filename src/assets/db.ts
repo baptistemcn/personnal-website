@@ -33,7 +33,7 @@ const EXPERIENCES_FR = [
         name: "Jest",
       },
       {
-        name: "Rest API",
+        name: ".NET",
       },
       {
         name: "PHP",
