@@ -22,10 +22,6 @@
   align-items: center;
 }
 
-.experience > div > div > p {
-  text-align: left;
-}
-
 .experience > div > div {
   border-bottom: 2px solid var(--blue);
   padding: 0 0 5px 0;
