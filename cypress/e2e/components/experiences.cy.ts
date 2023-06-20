@@ -12,7 +12,7 @@ describe("experiences component", () => {
   it("should render a title in experience card", () => {
     cy.visit("/en/about");
 
-    cy.get(".about-experience > div > div > h3").should("be.visible");
+    cy.get(".about-experience > div > div > div > h3").should("be.visible");
   });
 
   it("should render a presentation text in experience", () => {
