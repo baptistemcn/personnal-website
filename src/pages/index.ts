@@ -1,4 +1,4 @@
 export { About } from "./about/About";
-export { Certifications } from "./Certifications";
+export { Certifications } from "./certifications/Certifications";
 export { Home } from "./Home";
 export { Projects } from "./Projects";
