@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 
-import { Experience } from "../components";
+import { Experience } from "../../components";
 
-import { EXPERIENCES } from "../assets/db";
+import { EXPERIENCES } from "../../assets/db";
 
 import "./about.css";
 
