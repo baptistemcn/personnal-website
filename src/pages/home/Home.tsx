@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 
-import { Card } from "../components";
+import { Card } from "../../components";
 
-import img from "../assets/baptiste-marcon.webp";
-import { ICONS } from "../assets/db";
+import img from "../../assets/baptiste-marcon.webp";
+import { ICONS } from "../../assets/db";
 
 export const Home = () => {
   const { t } = useTranslation();
