@@ -5,6 +5,7 @@ export type {
 } from "./certificates.interface";
 export type { ExperienceItem, ExperiencesProps } from "./experiences.interface";
 export type { IconsProps } from "./icons.interface";
+export type { ProjectProps } from "./project.interface";
 export type {
   TechnologiesItem,
   TechnologiesProps,
