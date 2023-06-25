@@ -13,8 +13,8 @@
 @media (min-width: 767.98px) {
   .projects > div {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 0 20px;
-    grid-template-areas: ". .";
+    grid-template-areas: ". . .";
   }
 }
