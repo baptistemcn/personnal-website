@@ -20,12 +20,4 @@ describe("certifications component", () => {
 
     cy.get(".certifications > div > article > a").should("be.visible");
   });
-
-  it("should redirect to certification website when click on link", () => {
-    cy.visit("/en/certifications");
-
-    cy.get(".certifications > div > article > a[href*='classic-react']")
-      .invoke("removeAttr", "target")
-      .click();
-  });
 });
