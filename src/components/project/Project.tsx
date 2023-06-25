@@ -9,8 +9,8 @@ export const Project = ({ project }: ProjectProps) => {
           <h2>{proj.name}</h2>
           <p>{proj.presentation}</p>
           <div>
-            {proj.github && <a href={proj.github}>Github</a>}
-            {proj.hosted && <a href={proj.hosted}>Hosted</a>}
+            {proj.github && <a href={proj.github.url}>{proj.github.name}</a>}
+            {proj.hosted && <a href={proj.hosted.url}>{proj.hosted.name}</a>}
           </div>
         </article>
       ))}

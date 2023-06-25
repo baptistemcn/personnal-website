@@ -106,8 +106,14 @@ export const PROJECTS = [
   {
     name: "test",
     presentation: "test",
-    github: "test",
-    hosted: "test",
+    github: {
+      name: "test",
+      url: "test",
+    },
+    hosted: {
+      name: "test",
+      url: "test",
+    },
   },
 ];
 
