@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Project } from "../../components";
 
 import "./projects.css";
+import { PROJECTS } from "../../assets/db";
 
 export const Projects = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ export const Projects = () => {
     <div className="projects">
       <h1>{t("projects.title")}</h1>
       <div>
-        <Project />
+        <Project project={PROJECTS} />
       </div>
     </div>
   );
