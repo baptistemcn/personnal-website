@@ -5,8 +5,8 @@ export interface ProjectProps {
 interface ProjectItem {
   name: string;
   presentation: string;
-  github: GithubItem;
-  hosted: HostItem;
+  github?: GithubItem;
+  hosted?: HostItem;
 }
 
 interface GithubItem {

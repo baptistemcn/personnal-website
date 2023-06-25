@@ -104,15 +104,11 @@ export const CERTIFICATES = [
 
 export const PROJECTS = [
   {
-    name: "test",
-    presentation: "test",
+    name: "Spotify Profile",
+    presentation: "Play with Spotify API",
     github: {
-      name: "test",
-      url: "test",
-    },
-    hosted: {
-      name: "test",
-      url: "test",
+      name: "Spotify Profile",
+      url: "https://github.com/baptistemcn/spotify-profile/",
     },
   },
 ];
