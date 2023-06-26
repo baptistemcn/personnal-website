@@ -16,11 +16,20 @@ describe("Certificate Component", () => {
       name: "Certificate 1",
       link: "https://example.com/cert1",
       download: "https://example.com/cert1.pdf",
+      finished: true,
       label: "Download Certificate 1",
     },
     {
       name: "Certificate 2",
       link: "https://example.com/cert2",
+      finished: true,
+      download: "",
+      label: "",
+    },
+    {
+      name: "Certificate 3",
+      link: "https://example.com/cert3",
+      finished: false,
       download: "",
       label: "",
     },
@@ -58,6 +67,15 @@ describe("Certificate Component", () => {
       expect(linkElement).toBeInTheDocument();
       expect(linkElement).toHaveAttribute("href", certificate.link);
     });
+  });
+
+  it("should render an inprogress label if certification is not finished", () => {
+    const { getByText } = render(
+      <Certificate certificates={mockCertificateProps} />,
+    );
+
+    const labelElement = getByText("certifications.inProgress.label");
+    expect(labelElement).toBeInTheDocument();
   });
 
   it("should render download buttons for certificates with download links", () => {
