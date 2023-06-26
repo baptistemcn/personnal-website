@@ -1,6 +1,15 @@
 import { render } from "@testing-library/react";
 import { Certificate } from "./Certificate";
 
+jest.mock("react-i18next", () => ({
+  useTranslation: () => ({
+    t: (key: unknown) => key,
+    i18n: {
+      changeLanguage: jest.fn(),
+    },
+  }),
+}));
+
 describe("Certificate Component", () => {
   const mockCertificateProps = [
     {

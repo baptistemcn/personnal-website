@@ -89,16 +89,24 @@ export const EXPERIENCES =
 
 export const CERTIFICATES = [
   {
-    name: "React Hooks by dev.ui",
-    link: "https://ui.dev/c/react-hooks/",
-  },
-  {
-    name: "Class React by dev.ui",
-    link: "https://ui.dev/c/classic-react/",
-  },
-  {
     name: "Modern Javascript by dev.ui",
     link: "https://ui.dev/c/modern-javascript/",
+    finished: true,
+  },
+  {
+    name: "Classic React by dev.ui",
+    link: "https://ui.dev/c/classic-react/",
+    finished: true,
+  },
+  {
+    name: "React Hooks by dev.ui",
+    link: "https://ui.dev/c/react-hooks/",
+    finished: true,
+  },
+  {
+    name: "React Router V5",
+    link: "https://ui.dev/c/react-router-v5",
+    finished: false,
   },
 ];
 

@@ -12,7 +12,7 @@ export const Certifications = () => {
     <div className="certifications">
       <h1>{t("certifications.title")}</h1>
       <div data-testid="certifications-list">
-        <Certificate certificates={CERTIFICATES} />
+        <Certificate certificates={CERTIFICATES.reverse()} />
       </div>
     </div>
   );

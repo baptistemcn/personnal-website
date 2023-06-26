@@ -23,7 +23,10 @@
       "text": "Je m'appelle Baptiste Marcon et je suis développeur Front-End. Passionné par la création d'expériences interactives et conviviales, je suis constamment à la recherche de nouvelles technologies et tendances dans le domaine du développement web. \n\n Actuellement, je travaille chez NEHS Digital, une société spécialisée dans les solutions numériques innovantes. Grâce à cette expérience, j'ai pu développer mes compétences et acquérir une solide expertise dans le domaine du développement Front-End. \n\n Je suis constamment en quête de nouvelles opportunités pour collaborer sur des projets intéressants et stimulants. Que ce soit pour la création d'un site web, le développement d'une application ou l'amélioration de l'expérience utilisateur, je suis prêt à relever de nouveaux défis. \n\n N'hésitez pas à parcourir mon portfolio pour découvrir certains de mes projets récents. Si vous êtes intéressé par une collaboration ou si vous avez des questions, n'hésitez pas à me contacter. Je serai ravi d'échanger avec vous."
     },
     "certifications": {
-      "title": "Certifications"
+      "title": "Certifications",
+      "inProgress": {
+        "label": "En cours..."
+      }
     },
     "projects": {
       "title": "Projets"
