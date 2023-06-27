@@ -106,7 +106,7 @@ export const CERTIFICATES = [
   {
     name: "React Router V5",
     link: "https://ui.dev/c/react-router-v5",
-    finished: false,
+    finished: true,
   },
 ];
 
