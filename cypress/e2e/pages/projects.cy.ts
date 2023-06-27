@@ -6,12 +6,12 @@ describe("project page", () => {
   it("should render a title", () => {
     cy.visit("/en/projects");
 
-    cy.get("h1").should("be.visible");
+    cy.get(".projects > h1").should("be.visible");
   });
 
-  it("should render a presentation text", () => {
+  it("should render at least one project", () => {
     cy.visit("/en/projects");
 
-    cy.get("p").should("be.visible");
+    cy.get(".projects > div > article:first-child").should("be.visible");
   });
 });
