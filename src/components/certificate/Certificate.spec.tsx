@@ -74,7 +74,7 @@ describe("Certificate Component", () => {
       <Certificate certificates={mockCertificateProps} />,
     );
 
-    const labelElement = getByText("certifications.inProgress.label");
+    const labelElement = getByText("(certifications.inProgress.label)");
     expect(labelElement).toBeInTheDocument();
   });
 

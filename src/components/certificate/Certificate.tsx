@@ -9,8 +9,13 @@ export const Certificate = ({ certificates }: CertificatesProps) => {
       {certificates.map((cert, index) => {
         return (
           <article className="certificate" key={index}>
-            <h2>{cert.name}</h2>
-            {!cert.finished && <p>{t("certifications.inProgress.label")}</p>}
+            {cert.finished && <h2>{cert.name}</h2>}
+            {!cert.finished && (
+              <div>
+                <h2>{cert.name}</h2>
+                <span>({t("certifications.inProgress.label")})</span>
+              </div>
+            )}
             <a href={cert.link} target="_blank" rel="noopener">
               {cert.link}
             </a>

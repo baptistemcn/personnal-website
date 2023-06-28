@@ -12,6 +12,17 @@
   box-shadow: 1px 3px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
+.certificate > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.certificate > div > span {
+  font-style: italic;
+}
+
 .certificate > a {
   margin: 1em 0;
   color: var(--blue);
