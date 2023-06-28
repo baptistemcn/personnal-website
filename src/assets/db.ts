@@ -104,12 +104,12 @@ export const CERTIFICATES = [
     finished: true,
   },
   {
-    name: "React Router V5",
+    name: "React Router v5 by dev.ui",
     link: "https://ui.dev/c/react-router-v5",
     finished: true,
   },
   {
-    name: "React Router v6",
+    name: "React Router v6 by dev.ui",
     link: "https://ui.dev/c/react-router",
     finished: false,
   },
