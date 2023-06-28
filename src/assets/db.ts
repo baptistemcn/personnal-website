@@ -108,6 +108,11 @@ export const CERTIFICATES = [
     link: "https://ui.dev/c/react-router-v5",
     finished: true,
   },
+  {
+    name: "React Router v6",
+    link: "https://ui.dev/c/react-router",
+    finished: false,
+  },
 ];
 
 export const PROJECTS = [
