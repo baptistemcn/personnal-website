@@ -4,18 +4,11 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { Flag } from "../flag/Flag";
+import { HeaderProps } from "../../types";
 
-import "./header.css";
 import { FRENCH_FLAG, US_FLAG } from "../../assets/db";
 
-interface HeaderProps {
-  headers: Array<LinksProps>;
-}
-
-interface LinksProps {
-  name: string;
-  url: string;
-}
+import "./header.css";
 
 export const Header = ({ headers }: HeaderProps) => {
   const [activeNavItem, setActiveNavItem] = useState("");
