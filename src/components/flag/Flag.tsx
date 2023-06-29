@@ -1,9 +1,6 @@
-import "./flag.css";
+import { FlagProps } from "../../types";
 
-interface FlagProps {
-  nation: string;
-  description: string;
-}
+import "./flag.css";
 
 export const Flag = ({ nation, description }: FlagProps) => {
   return (
