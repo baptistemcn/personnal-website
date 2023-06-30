@@ -43,11 +43,9 @@ function App() {
       <Header headers={PAGES} />
       <main>
         <Routes>
-          {PAGES.map((element, index) => {
-            return (
-              <Route key={index} path={element.url} element={element.pages} />
-            );
-          })}
+          {PAGES.map((element, index) => (
+            <Route key={index} path={element.url} element={element.pages} />
+          ))}
           <Route path="*" element={<Navigate to={redirect} />} />
         </Routes>
       </main>

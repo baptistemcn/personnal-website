@@ -13,16 +13,14 @@ export const Card = ({ alt, icons, img, text, title }: CardProps) => {
         <h1>{title}</h1>
         <p>{text}</p>
         <div className="card-icons">
-          {icons.map((icon, index) => {
-            return (
-              <Icons
-                img={icon.img}
-                link={icon.link}
-                name={icon.name}
-                key={index}
-              />
-            );
-          })}
+          {icons.map((icon, index) => (
+            <Icons
+              img={icon.img}
+              link={icon.link}
+              name={icon.name}
+              key={index}
+            />
+          ))}
         </div>
       </div>
     </div>
