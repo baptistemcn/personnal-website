@@ -2,12 +2,16 @@ import { useTranslation } from "react-i18next";
 
 import { Experience } from "../../components";
 
-import { EXPERIENCES } from "../../assets/db";
+import { experiences } from "../../assets/db";
 
 import "./about.css";
 
 export const About = () => {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+
+  const lang = i18n.language;
+
+  const EXPERIENCES = experiences(lang);
 
   return (
     <div className="about">

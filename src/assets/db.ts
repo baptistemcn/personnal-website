@@ -84,8 +84,9 @@ const EXPERIENCES_EN = [
   },
 ];
 
-export const EXPERIENCES =
-  navigator.language === "fr" ? EXPERIENCES_FR : EXPERIENCES_EN;
+export const experiences = (language: string) => {
+  return language === "fr" ? EXPERIENCES_FR : EXPERIENCES_EN;
+};
 
 export const CERTIFICATES = [
   {
