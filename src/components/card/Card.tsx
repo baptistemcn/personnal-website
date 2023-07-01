@@ -14,12 +14,7 @@ export const Card = ({ alt, icons, img, text, title }: CardProps) => {
         <p>{text}</p>
         <div className="card-icons">
           {icons.map((icon, index) => (
-            <Icons
-              img={icon.img}
-              link={icon.link}
-              name={icon.name}
-              key={index}
-            />
+            <Icons {...icon} key={index} />
           ))}
         </div>
       </div>
