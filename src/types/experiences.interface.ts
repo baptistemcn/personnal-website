@@ -5,7 +5,7 @@ export interface ExperiencesProps {
 }
 
 export interface ExperienceItem {
-  title: string;
+  name: string;
   presentation: string;
   duration: string;
   technologies: Array<TechnologiesItem>;

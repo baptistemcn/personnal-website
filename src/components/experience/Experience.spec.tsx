@@ -4,13 +4,13 @@ import { Experience } from "./Experience";
 describe("Experience Component", () => {
   const mockExperiences = [
     {
-      title: "Experience 1",
+      name: "Experience 1",
       presentation: "Presentation 1",
       duration: "Janv. 2022",
       technologies: [{ name: "Tech 1" }, { name: "Tech 2" }],
     },
     {
-      title: "Experience 2",
+      name: "Experience 2",
       presentation: "Presentation 2",
       duration: "Janv. 2023",
       technologies: [{ name: "Tech 3" }, { name: "Tech 4" }],
@@ -32,7 +32,7 @@ describe("Experience Component", () => {
     const { getByText } = render(<Experience experiences={mockExperiences} />);
 
     const experienceTitles = mockExperiences.map(
-      (experience) => experience.title,
+      (experience) => experience.name,
     );
 
     experienceTitles.forEach((title) => {
