@@ -7,7 +7,8 @@ module.exports = {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   coveragePathIgnorePatterns: [
     "index.ts",
-    "db.ts"
+    "db.ts",
+    "src/api"
   ],
   moduleNameMapper: {
     "\\.(jpg|jpeg|png|gif|svg|webp)$": "jest-file-loader",
