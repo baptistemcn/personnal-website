@@ -6,10 +6,10 @@ export const Certificate = ({ certificates }: CertificatesProps) => {
   const { t } = useTranslation();
   return (
     <>
-      {certificates.map((cert, index) => (
+      {certificates?.map((cert, index) => (
         <article className="certificate" key={index}>
-          {cert.finished && <h2>{cert.name}</h2>}
-          {!cert.finished && (
+          {!cert.inProgress && <h2>{cert.name}</h2>}
+          {cert.inProgress && (
             <div>
               <h2>{cert.name}</h2>
               <span>({t("certifications.inProgress.label")})</span>

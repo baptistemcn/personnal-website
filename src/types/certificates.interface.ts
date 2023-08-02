@@ -1,11 +1,11 @@
 export interface CertificatesProps {
-  certificates: Array<CertificatesItems>;
+  certificates?: Array<CertificatesItems>;
 }
 
 export interface CertificatesItems {
   name: string;
   link: string;
-  finished?: boolean;
+  inProgress?: boolean;
   download?: string;
   label?: string;
 }
