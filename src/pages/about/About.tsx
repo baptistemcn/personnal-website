@@ -1,17 +1,32 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Experience } from "../../components";
-
-import { experiences } from "../../assets/db";
-
+import { getAbout } from "../../api";
+import { Experience, Loader } from "../../components";
+import { ExperienceItem } from "../../types";
 import "./about.css";
 
 export const About = () => {
+  const [about, setAbout] = useState<Array<ExperienceItem>>();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(true);
+
   const { i18n, t } = useTranslation();
 
   const lang = i18n.language;
 
-  const EXPERIENCES = experiences(lang);
+  useEffect(() => {
+    getAbout(lang)
+      .then((data) => {
+        setAbout(data);
+        setLoading(false);
+        setError(false);
+      })
+      .catch(() => {
+        setLoading(false);
+        setError(true);
+      });
+  }, [lang]);
 
   return (
     <div className="about">
@@ -21,7 +36,9 @@ export const About = () => {
       </div>
       <h2>{t("about.subtitle")}</h2>
       <div className="about-experience" data-testid="about-experience">
-        <Experience experiences={EXPERIENCES} />
+        {loading && <Loader />}
+        {error && <p>Error !</p>}
+        <Experience experiences={about} />
       </div>
     </div>
   );

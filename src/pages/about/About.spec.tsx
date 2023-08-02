@@ -1,5 +1,7 @@
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import { About } from "./About";
+
+import * as api from "../../api";
 
 jest.mock("react-i18next", () => ({
   useTranslation: () => ({
@@ -11,6 +13,11 @@ jest.mock("react-i18next", () => ({
 }));
 
 describe("About Page", () => {
+  const mockedExperiences = [
+    { id: 1, name: "Experience 1", description: "Description 1" },
+    { id: 2, name: "Experience 2", description: "Description 2" },
+  ];
+
   it("should render", () => {
     render(<About />);
   });
@@ -41,5 +48,50 @@ describe("About Page", () => {
     const experienceComponent = getByTestId("about-experience");
 
     expect(experienceComponent).toBeInTheDocument();
+  });
+
+  it("should render experience component with data", async () => {
+    jest.spyOn(api, "getAbout").mockResolvedValue(mockedExperiences);
+
+    const { getByTestId, getByText } = render(<About />);
+
+    const component = getByTestId("about-experience");
+    const loaderElement = getByTestId("loader");
+
+    expect(component).toBeTruthy();
+    expect(component).toBeInTheDocument();
+
+    expect(loaderElement).toBeTruthy();
+    expect(loaderElement).toBeInTheDocument();
+
+    await waitFor(() => {
+      expect(loaderElement).not.toBeInTheDocument();
+    });
+
+    expect(getByText("Experience 1")).toBeInTheDocument();
+    expect(getByText("Experience 2")).toBeInTheDocument();
+  });
+
+  it("should render experience component with data", async () => {
+    jest
+      .spyOn(api, "getAbout")
+      .mockRejectedValue(new Error("Failed to fetch data"));
+
+    const { getByTestId, getByText } = render(<About />);
+
+    const component = getByTestId("about-experience");
+    const loaderElement = getByTestId("loader");
+
+    expect(component).toBeTruthy();
+    expect(component).toBeInTheDocument();
+
+    expect(loaderElement).toBeTruthy();
+    expect(loaderElement).toBeInTheDocument();
+
+    await waitFor(() => {
+      expect(loaderElement).not.toBeInTheDocument();
+    });
+
+    expect(getByText("Error !")).toBeInTheDocument();
   });
 });
