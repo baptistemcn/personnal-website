@@ -9,7 +9,7 @@ import "./about.css";
 export const About = () => {
   const [about, setAbout] = useState<Array<ExperienceItem>>();
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
 
   const { i18n, t } = useTranslation();
 
@@ -20,7 +20,6 @@ export const About = () => {
       .then((data) => {
         setAbout(data);
         setLoading(false);
-        setError(false);
       })
       .catch(() => {
         setLoading(false);
