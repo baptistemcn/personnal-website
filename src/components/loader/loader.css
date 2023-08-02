@@ -1,0 +1,47 @@
+.loader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.loader-bar {
+  width: 10px;
+  height: 50px;
+  background: transparent;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  animation: loader 1.2s linear infinite;
+  gap: 5px;
+}
+
+.bar1 {
+  animation-delay: 0.1s;
+}
+
+.bar2 {
+  animation-delay: 0.2s;
+}
+
+.bar3 {
+  animation-delay: 0.3s;
+}
+
+.bar4 {
+  animation-delay: 0.4s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(1);
+    background: black;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
