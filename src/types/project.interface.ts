@@ -1,17 +1,11 @@
 export interface ProjectProps {
-  project: Array<ProjectItem>;
+  project?: Array<ProjectItem>;
 }
 
-interface ProjectItem {
-  name: string;
-  presentation: string;
-  github?: GithubItem;
-  hosted?: HostItem;
-}
-
-interface GithubItem {
-  name: string;
-  url: string;
+export interface ProjectItem {
+  title: string;
+  description: string;
+  host?: HostItem;
 }
 
 interface HostItem {

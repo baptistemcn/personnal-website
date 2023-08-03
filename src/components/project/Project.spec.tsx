@@ -4,27 +4,19 @@ import { Project } from "./Project";
 describe("Project Component", () => {
   const mockProjectProps = [
     {
-      name: "test title 1",
-      presentation: "test presentation 1",
-      github: {
-        name: "test github 1",
-        url: "test github url 1",
-      },
-      hosted: {
+      title: "test title 1",
+      description: "test presentation 1",
+      host: {
         name: "test hosted 1",
         url: "test hosted 1",
       },
     },
     {
-      name: "test title 2",
-      presentation: "test presentation 2",
-      github: {
-        name: "test github 2",
-        url: "test github url 2",
-      },
-      hosted: {
-        name: "test hosted 1",
-        url: "test hosted url 1",
+      title: "test title 2",
+      description: "test presentation 2",
+      host: {
+        name: "test hosted 2",
+        url: "test hosted url 2",
       },
     },
   ];
@@ -44,7 +36,7 @@ describe("Project Component", () => {
     const { queryByText } = render(<Project project={mockProjectProps} />);
 
     mockProjectProps.forEach((project) => {
-      const nameElement = queryByText(project.name);
+      const nameElement = queryByText(project.title);
       expect(nameElement).toBeInTheDocument();
     });
   });
@@ -53,7 +45,7 @@ describe("Project Component", () => {
     const { queryByText } = render(<Project project={mockProjectProps} />);
 
     mockProjectProps.forEach((project) => {
-      const presentationElement = queryByText(project.presentation);
+      const presentationElement = queryByText(project.description);
       expect(presentationElement).toBeInTheDocument();
     });
   });
@@ -62,16 +54,16 @@ describe("Project Component", () => {
     const { getByRole } = render(<Project project={mockProjectProps} />);
 
     const projetWithGithubLink = mockProjectProps.find(
-      (project) => project.github,
+      (project) => project.host,
     );
     const githubLinkElement = getByRole("link", {
-      name: projetWithGithubLink?.github.name,
+      name: projetWithGithubLink?.host.name,
     });
 
     expect(githubLinkElement).toBeInTheDocument();
     expect(githubLinkElement).toHaveAttribute(
       "href",
-      projetWithGithubLink?.github.url,
+      projetWithGithubLink?.host.url,
     );
   });
 
@@ -79,16 +71,16 @@ describe("Project Component", () => {
     const { getByRole } = render(<Project project={mockProjectProps} />);
 
     const projectWithHostedLink = mockProjectProps.find(
-      (project) => project.hosted,
+      (project) => project.host,
     );
     const hostedLinkElement = getByRole("link", {
-      name: projectWithHostedLink?.github.name,
+      name: projectWithHostedLink?.host.url,
     });
 
     expect(hostedLinkElement).toBeInTheDocument();
     expect(hostedLinkElement).toHaveAttribute(
       "href",
-      projectWithHostedLink?.github.url,
+      projectWithHostedLink?.host.url,
     );
   });
 });
