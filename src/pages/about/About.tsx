@@ -21,9 +21,11 @@ export const About = () => {
         setAbout(data);
         setLoading(false);
       })
-      .catch(() => {
+      .catch((error) => {
         setLoading(false);
         setError(true);
+        // eslint-disable-next-line no-console
+        console.log(error);
       });
   }, [lang]);
 
